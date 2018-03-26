@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Quiz Game!</title>
+
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/Users/dontillery/Code/Homework/Trivia Game/Trivia-Game/Assets/javascript/quiz2.js"> </script>
+</head>
+<body>
+<div id = "container">
+    <header>
+        <h1>
+            America's Most Boring States
+        </h1>
+            <h3>A short quiz on this countries less appealing states</h3>
+        <p>Don't Fall Asleep During this Snoozer of a Test!</p>
+    </header>
+    <section>
+        <div id = "timer"></div>
+        <div id = "results"></div>
+        <div id = "allQuestions">
+        <form name="quizForm" onsubmit="return submitAnswers()">
+                <h3>1. What is the capital of South Dakota? </h3>
+        <input type = "radio" name="q1" value="a" id="q1a">a.  Pierre<br><br>
+        <input type = "radio" name="q1" value="b" id="q1b">b.  Souix Falls<br><br>
+        <input type = "radio" name="q1" value="c" id="q1c">c.  Bismark<br><br>
+        <input type = "radio" name="q1" value="d" id="q1d">d.  SpringField<br><br>
+
+        <br>
+
+        <h3>2. What is the population of Maine? </h3>
+        <input type = "radio" name="q2" value="a" id="q2a">a.  975 K<br><br>
+        <input type = "radio" name="q2" value="b" id="q2b">b.  3.1 MM<br><br>
+        <input type = "radio" name="q2" value="c" id="q2c">c.  1.3 MM<br><br>
+        <input type = "radio" name="q2" value="d" id="q2d">d.  5.1 MM<br><br>
+                
+        <br>
+
+        <h3>3. What state has the most reported Sasquatch sitings? </h3>
+        <input type = "radio" name="q3" value="a" id="q3a">a.  Oregon<br><br>
+        <input type = "radio" name="q3" value="b" id="q3b">b.  Ohio<br><br>
+        <input type = "radio" name="q3" value="c" id="q3c">c.  Washington<br><br>
+        <input type = "radio" name="q3" value="d" id="q3d">d.  Illinois<br><br>
+
+        <br>
+
+        <h3>4. Which of these countries is Alaska larger than?</h3>
+        <input type = "radio" name="q4" value="a" id="q4a">a.  Iran<br><br>
+        <input type = "radio" name="q4" value="b" id="q4b">b.  Democratic Rep. of Congo<br><br>
+        <input type = "radio" name="q4" value="c" id="q4c">c.  Saudi Arabia<br><br>
+        <input type = "radio" name="q4" value="d" id="q4d">d.  Mongolia<br><br>
+
+        <br>
+
+        <h3>5. According to CNN, what state is considered the "Dumbest"? </h3>
+        <input type = "radio" name="q5" value="a" id="q5a">a.  Alabama<br><br>
+        <input type = "radio" name="q5" value="b" id="q5b">b.  West Virginia<br><br>
+        <input type = "radio" name="q5" value="c" id="q5c">c.  Mississippi<br><br>
+        <input type = "radio" name="q5" value="d" id="q5d">d.  Tenneessee<br><br>
+
+        <br>
+
+        <h3>6. Which of the lower 48 states was the last to join the United States? </h3>
+        <input type = "radio" name="q6" value="a" id="q6a">a.  Montana<br><br>
+        <input type = "radio" name="q6" value="b" id="q6b">b.  Arizona<br><br>
+        <input type = "radio" name="q6" value="c" id="q6c">c.  Nevada<br><br>
+        <input type = "radio" name="q6" value="d" id="q6d">d.  New Mexico<br><br>
+
+        <br>
+
+        <h3>7. Which of the following is the largest city in Nebraska? </h3>
+        <input type = "radio" name="q7" value="a" id="q7a">a.  Omaha<br><br>
+        <input type = "radio" name="q7" value="b" id="q7b">b.  Lincoln<br><br>
+        <input type = "radio" name="q7" value="c" id="q7c">c.  Bellview<br><br>
+        <input type = "radio" name="q7" value="d" id="q7d">d.  Witchita<br><br>
+
+        <br>
+
+        <h3>8. Buffalo Bill and John Wayne hail from which of these lackluster states?  </h3>
+        <input type = "radio" name="q8" value="a" id="q8a">a.  Oklahoma<br><br>
+        <input type = "radio" name="q8" value="b" id="q8b">b.  Kansas<br><br>
+        <input type = "radio" name="q8" value="c" id="q8c">c.  Iowa<br><br>
+        <input type = "radio" name="q8" value="d" id="q8d">d.  Texas<br><br>
+
+        <br>
+
+        <h3>9. Of all of this great countries lousy states, this one was the first to give women the right to vote? Score one for the ladies! </h3>
+        <input type = "radio" name="q9" value="a" id="q9a">a.  North Dakota<br><br>
+        <input type = "radio" name="q9" value="b" id="q9b">b.  Indiana<br><br>
+        <input type = "radio" name="q9" value="c" id="q9c">c.  South Dakota<br><br>
+        <input type = "radio" name="q9" value="d" id="q9d">d.  Wyoming<br><br>
+
+        <br>
+
+        <h3>10. People residing in this state have recorded more DUI arrests than anyother state? Please drink responsibly.</h3>
+        <input type = "radio" name="q10" value="a" id="q9a">a.  Wyoming<br><br>
+        <input type = "radio" name="q10" value="b" id="q9b">b.  Florida<br><br>
+        <input type = "radio" name="q10" value="c" id="q9c">c.  Nevada<br><br>
+        <input type = "radio" name="q10" value="d" id="q9d">d.  California<br><br>
+    
+   
+
+
+
+        <br>
+        <br>
+            
+        <input type = "submit" value="Submit Answers">
+    </div>
+
+    </section>
+
+        <footer>
+       
+        </footer>
+
+
+
+</body>
+</html>
